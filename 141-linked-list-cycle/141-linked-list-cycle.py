@@ -6,12 +6,6 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        # To determine a cycle in a linked list, we can use two pointers
-        # One pointer is at the head, and the other is ahead by two
-        # If both pointers ever equal to each other, that must mean there is a cycle
-        # Becaue the second pointer cycled and went back
-        # Floyd's Tortoise and Hare Algorithm
-        
         slow, fast = head, head
         
         # While fast pointer is not null
@@ -26,3 +20,9 @@ class Solution:
         # if the fast pointer does equal to null that means there is no loop.
         # the list stops
         return False
+    
+        # To determine a cycle in a linked list, we can use two pointers
+        # One pointer is at the head, and the other is ahead by two
+        # If both pointers ever equal to each other, that must mean there is a cycle
+        # Becaue the second pointer cycled and went back
+        # Floyd's Tortoise and Hare Algorithm
