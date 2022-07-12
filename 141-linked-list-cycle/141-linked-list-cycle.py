@@ -14,11 +14,15 @@ class Solution:
         
         slow, fast = head, head
         
-        # While second pointer is not null
+        # While fast pointer is not null
         while fast and fast.next:
+            # iterate slow pointer by 1
             slow = slow.next
+            # iterate fast pointer by 2
             fast = fast.next.next
-            
+            # if both pointers meet/ equal to the same node, return true
             if fast == slow:
                 return True
+        # if the fast pointer does equal to null that means there is no loop.
+        # the list stops
         return False
