@@ -1,6 +1,5 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        
         # Use hashmaps to count the amount of times each character shows up in each string
         sCharCount = {}
         tCharCount = {}
@@ -18,6 +17,6 @@ class Solution:
         # compare both hashmaps to see if the same
         if sCharCount != tCharCount:
             return False
-        
+        # return true if it passes both tests
         return True
             
