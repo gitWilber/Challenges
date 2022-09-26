@@ -9,13 +9,16 @@ class Solution:
         prev = None
         curr = head
         
+        # while theres a current node
         while(curr):
             
-            # temp hold next value
+            # temp hold next value before we switch pointer
             temp = curr.next
             # current pointer will point to prev
             curr.next = prev
+            # iterate, prev is now curr node
             prev = curr
+            # iterate, curr node goes to temp node, which has next node stored
             curr = temp
         
         # return reverse LL
