@@ -1,17 +1,27 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        # hashmap to store numbers visited
-        # difference variable
-        numHash = {}
-        diff = 0
-        # loop thorugh nums array
+        # Passing arr of ints called nums: nums[]
+        # Passing int called target: int target
+        # return list of indices of two numbers that add up to target
+        # (nums[], target)
+        # return list[i,i]
+        
+        # Use hashmap to store visted numbers
+        # if the difference of target - number is in hashmap, return indices
+        
+        visited = {}
+        
+        # for i in range of lenth of array
         for i in range(len(nums)):
-            # difference to see if it is in hashmap
+            # subtract
             diff = target - nums[i]
-            # if not in hashmap, store array num into hashmap
-            if diff not in numHash:
-                numHash[nums[i]] = i
-            # else return both indices
+            
+            # if difference in hashmap
+            if diff in visited:
+                # return indices
+                return [visited[diff], i]
+            # else place in hashmap
+            # number : index
             else:
-                return numHash[diff], i
+                visited[nums[i]] = i
     
