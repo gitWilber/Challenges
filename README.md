@@ -1,2 +1,2 @@
-# leetcode
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub)
+# Exercises
+Collection of challenges to improve critical thinking and programming skills.
